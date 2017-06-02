@@ -1,0 +1,18 @@
+name: app
+version: 0.1.0
+
+authors:
+  - Condef5 <davis.con.fab@gmail.com>
+
+targets:
+  react-crystal-demo:
+    main: src/react-crystal-demo.cr
+
+crystal: 0.22.0
+
+dependencies:
+  kemal:
+    github: sdogruyol/kemal
+    branch: master
+
+license: MIT
