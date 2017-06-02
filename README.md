@@ -1,27 +1,55 @@
-# react-crystal-demo
+# React + ES6 + Kemal  Chat Example 
 
-TODO: Write a description here
+Chat básico construido sobre crystal, react y es6.
+
+## Requirements
+
+* Crystal 0.22.0 
+* Node (I have the v7.10.0)
+* YARN (I have the v0.24.5)
 
 ## Installation
 
-TODO: Write installation instructions here
+Clona este repositorio
+```sh 
+	git clone https://github.com/condef5/drupvon-chat.git 
+	cd drupvon-chat
+```
 
-## Usage
+Antes de correr el programa tienes que instalar las dependencias
 
-TODO: Write usage instructions here
+```sh
+	shards install
+	git clone https://github.com/condef5/drupvon-chat.git
+	yarn install
+```
 
+## Run Project 
+
+Tú pueddes correr este programa de dos formas:
+Compilando/ejecutand el proyecto usando 
+
+```sh
+	crystal build src/app.cr --release
+```
+
+Corriendo el ejecutable : 
+
+```sh
+	./app 
+```
+
+Una vez que tú corres el programa, tú puedes abrir tu navegador y en [localhost:3000](http://localhost:3000) y ver la actual app.
+ 
 ## Development
 
-TODO: Write development instructions here
+Para subir a producción con heroku, necesitas una cuenta e instalar el toolbet de heroku, antes asegurate de cambiar el socket `ws` por `wss` en client/dist/app.js y ejecutar `yarn build` y correr  `crystal build src/app.cr --release`, ahora puedes ejecutar los siguientes comandos:
 
-## Contributing
-
-1. Fork it ( https://github.com/[your-github-name]/react-crystal-demo/fork )
-2. Create your feature branch (git checkout -b my-new-feature)
-3. Commit your changes (git commit -am 'Add some feature')
-4. Push to the branch (git push origin my-new-feature)
-5. Create a new Pull Request
-
-## Contributors
-
-- [[your-github-name]](https://github.com/[your-github-name]) [your-name-here] - creator, maintainer
+```sh
+heroku create drupvon-chat --buildpack https://github.com/crystal-lang/heroku-buildpack-crystal
+git remote -v
+git add .
+git commit -m "description of you commit"
+git push heroku master
+```
+ 

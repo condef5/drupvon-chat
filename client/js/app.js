@@ -8,8 +8,9 @@ class Chat extends React.Component {
 		this.state = { messages: [] }
 	}
 	componentDidMount(){
-		// const server = new WebSocket("ws://localhost:3000/messages")
-		const server = new WebSocket(`wss://${location.hostname}:${location.port}/messages`)
+		const server = new WebSocket("ws://localhost:3000/messages")
+		// Para producción
+		// const server = new WebSocket(`wss://${location.hostname}:${location.port}/messages`)
 		const user = localStorage.getItem("user") || prompt("¿Cúal es tu nombre?") 
 		const color = localStorage.getItem("color") || randomColor()
 
