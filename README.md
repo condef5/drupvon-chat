@@ -36,7 +36,7 @@ Una vez que tú corres el programa, tú puedes abrir tu navegador y en [localhos
  
 ## Deploy
 
-Para subir a producción esta app con heroku, necesitas una cuenta e instalar el toolbet de heroku, antes asegurate de cambiar el socket `ws` por `wss` en client/dist/app.js y ejecutar `$ yarn build` y por último compilar de nuevo el app con `$ crystal build src/app.cr --release`, ahora puedes ejecutar los siguientes comandos pa:
+Para subir a producción esta app con heroku, necesitas una cuenta e instalar el toolbet de heroku, antes asegurate de cambiar el socket `ws` por `wss` en `client/dist/app.js` y ejecutar `$ yarn build` y por último compilar de nuevo el app con `$ crystal build src/app.cr --release`, ahora puedes ejecutar los siguientes comandos :
 
 ```sh
 $ heroku create drupvon-chat --buildpack https://github.com/crystal-lang/heroku-buildpack-crystal
